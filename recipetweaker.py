@@ -110,11 +110,18 @@ def choices(filename):
 	opt1.draw(win)
 	opt2 = Text(Point(0,10),"Sugar-Free")
 	opt2.draw(win)
-	opt3 = Text(Point(0,5),"Vegan")
+	opt8 = Text(Point(0,5),"Dairy-Free")
+	opt8.draw(win)
+	opt3 = Text(Point(0,0),"Vegan")
 	opt3.draw(win)
-	opt4 = Text(Point(0,0),"Low-Sodium")
+	opt4 = Text(Point(0,-5),"Low-Sodium")
 	opt4.draw(win)
-	opt5 = Text(Point(0,-5),"Original Serving Number >> New Serving Number (ex. 4.5 >> 2)")
+	opt6 = Text(Point(0,-10),"Low Glycemic Index")
+	opt6.draw(win)
+	opt7 = Text(Point(0,-15),"Irritable Bowel Syndrome")
+	opt7.draw(win)
+	# ibs, irritable bowel syndrome, or both???
+	opt5 = Text(Point(0,-20),"Original Serving Number >> New Serving Number (ex. 4.5 >> 2)")
 	opt5.draw(win)
 
 	but_ctnu = Button(win, Point(0,-60),40,10,'Continue')
@@ -139,7 +146,7 @@ def choices(filename):
 	title.undraw()
 	prefblank.undraw()
 	
-	options = [opt1, opt2, opt3, opt4, opt5]
+	options = [opt1, opt2, opt3, opt4, opt5, opt6,opt7,opt8]
 
 	for i in options:
 		i.undraw()
