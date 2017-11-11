@@ -160,10 +160,11 @@ def pages(filename, prefs, raw):
 
 	but_next = Button(win, Point(80,90),20,18,'Next')
 	but_quit = Button(win, Point(-80,-80),20,20,'Quit')
-	but_again = Button(win, Point(80,-80),20,20,'Again!')
+	but_again = Button(win, Point(80,-80),20,20,'Restart')
+	but_retweak = Button(win, Point(40,-80),30,20,'Retweak')
 	# ask Stef about this one
 
-	but_arr = [but_next,but_quit,but_again]
+	but_arr = [but_next,but_quit,but_again, but_retweak]
 	for i in but_arr:
 		i.activate(True)
 
@@ -213,7 +214,7 @@ def pages(filename, prefs, raw):
 	while ( not but_quit.clicked(y)):
 		if (but_again.clicked(y)):
 	
-			but_arr = [but_next,but_quit,but_again,but_prev]
+			but_arr = [but_next,but_quit,but_again,but_prev, but_retweak]
 			for i in but_arr:
 				i.deactivate()
 			
@@ -223,6 +224,18 @@ def pages(filename, prefs, raw):
 			title.undraw()
 			textline.undraw()
 			start()
+		
+		if (but_retweak.clicked(y)):
+		    but_arr = [but_next,but_quit,but_again,but_prev, but_retweak]
+		    for i in but_arr:
+		        i.deactivate()
+		        
+		    for i in lines:
+		        i.undraw()
+		        
+		    title.undraw()
+		    textline.undraw()
+		    choices(filename)
 		
 		if (but_next.clicked(y)):
 			but_prev.deactivate()
