@@ -114,6 +114,8 @@ def choices(filename):
 	opt3.draw(win)
 	opt4 = Text(Point(0,0),"Low-Sodium")
 	opt4.draw(win)
+	opt5 = Text(Point(0,-5),"Original Serving Number >> New Serving Number (ex. 4.5 >> 2)")
+	opt5.draw(win)
 
 	but_ctnu = Button(win, Point(0,-60),40,10,'Continue')
 	but_ctnu.activate(True)
@@ -121,7 +123,7 @@ def choices(filename):
 	prefblank = Entry(Point(0,50),60)
 	prefblank.draw(win)
 	prefs = ''
-	
+			
 	y = win.getMouse()
 
 	while(prefs=='' or (not but_ctnu.clicked(y))):
@@ -137,7 +139,7 @@ def choices(filename):
 	title.undraw()
 	prefblank.undraw()
 	
-	options = [opt1, opt2, opt3, opt4]
+	options = [opt1, opt2, opt3, opt4, opt5]
 
 	for i in options:
 		i.undraw()
