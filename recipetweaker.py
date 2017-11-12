@@ -72,7 +72,7 @@ lowso_ls = dict([["salt","herbs, citrus juice, or garlic powder"],["breadcrumbs"
 lgi_ls = dict([["rice","wild rice"],["penne","cheese tortellini"],["white bread","sourdough bread"]])
 ibs_ls = dict([["milk","rice, soy, or oat milk"],["cheese","soy cheese"],["cream cheese","dairy-free cream cheese"],["sour cream","dairy-free sour cream"],["ground beef","textured vegetable protein"],["mayonnaise","fat-free mayonnaise"],["salad dressing","fat-free salad dressing"]])
 
-pref_ls = []
+pref_ls = dict([])
 
 def start():
 	win.setBackground(color_rgb(255,235,225))
@@ -212,7 +212,7 @@ def pages(filename, prefs, raw):
             sentc = line.split(",") # why split here??
 	new_file = " ".join(body)
     
-	for key in dictionary_lst.iterkeys(): # warning: DNE
+	for key in pref_ls.iterkeys(): # warning: DNE
             recur_replace(key, new_file, pref_ls)
 	print("outer ", new_file)
 	raw = new_file.split(" ")
