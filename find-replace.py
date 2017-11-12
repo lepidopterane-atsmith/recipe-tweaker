@@ -21,37 +21,16 @@ def recur_replace(key, file, dictionary_lst):
         for val in dictionary_lst.itervalues():
             value_ls.append(val)
         for i in value_ls[:]:
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
             print("inner ",file.replace(key, i))
             value_ls.remove(i)
             print(value_ls)
         dictionary_lst.pop(key) 
         # Key Error - you already popped the butter when you want to pop it again
-=======
->>>>>>> Stashed changes
-            print("HOPE THIS WORKS",file.replace(key, i))
-            value_ls.remove(i)
-            print(value_ls)
-        dictionary_lst.pop(key)
-<<<<<<< Updated upstream
-=======
->>>>>>> origin/master
->>>>>>> Stashed changes
         return recur_replace(key, file, dictionary_lst)
 
 
 def main(dictionary_lst):
-<<<<<<< Updated upstream
-    filename = "sarah_ex.txt"
-=======
-<<<<<<< HEAD
     filename = "cookies.txt"
-=======
-    filename = "sarah_ex.txt"
->>>>>>> origin/master
->>>>>>> Stashed changes
 
     #print("THIS IS THE DICT TYPE",type(dictionary_lst))
     #sentenc_arr = [] #not sure if you need this
@@ -79,20 +58,8 @@ def main(dictionary_lst):
     print("this are the key of dict", key) '''
     for key in dictionary_lst.iterkeys():
             recur_replace(key, new_file, vegan_ls)
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
+
     print("outer ", new_file)
 
 
 main(vegan_ls)
-=======
->>>>>>> Stashed changes
-    print("HOPE THIS WORKS", new_file)
-
-
-main(vegan_ls)
-<<<<<<< Updated upstream
-=======
->>>>>>> origin/master
->>>>>>> Stashed changes
